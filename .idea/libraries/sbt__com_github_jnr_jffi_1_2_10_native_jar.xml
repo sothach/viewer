@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt: com.github.jnr:jffi:1.2.10:native:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/nexus.es.ecg.tools/nexus/repository/marktplaats-releases/com/github/jnr/jffi/1.2.10/jffi-1.2.10-native.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

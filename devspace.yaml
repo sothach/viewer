@@ -1,0 +1,26 @@
+version: v1beta4
+images:
+  default:
+    image: dscr.io/${DEVSPACE_USERNAME}/viewer
+    dockerfile: viewer-app/target/docker/stage/Dockerfile
+deployments:
+- name: viewer
+  helm:
+    componentChart: true
+    values:
+      containers:
+      - image: dscr.io/${DEVSPACE_USERNAME}/viewer
+      service:
+        ports:
+        - port: 9000
+dev:
+  ports:
+  - imageName: default
+    forward:
+    - port: 9000
+  open:
+  - url: http://localhost:9000
+  sync:
+  - imageName: default
+    excludePaths:
+    - devspace.yaml
